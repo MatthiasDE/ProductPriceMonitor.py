@@ -9,8 +9,11 @@ RUN apk update
 RUN apk add make automake gcc g++ subversion python3-dev
 #---
 
+#This is necessary to install lxml
+RUN apk add libxml2-dev libxslt-dev python-dev
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "./PPM-DSC-HeisePV-GCM.py -r 3" ]
+CMD [ "python", "-f ./db/product_price_monitor.db -r 3" ]

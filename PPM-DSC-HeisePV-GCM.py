@@ -186,7 +186,7 @@ parser.add_argument('-m', '--mode',
                     choices=['test', 'normal'],
                     help='(-m test) for testmode without storing data to db (default: normal for nomal mode incl. storage)')
 parser.add_argument('-f', '--dbfile',
-                    default='.\product_price_monitor.db',
+                    default='product_price_monitor.db',
                     help='sqlite3 database file (default: .\product_price_monitor.db)')
 parser.add_argument('-r', '--runhour',
                     type=int,
