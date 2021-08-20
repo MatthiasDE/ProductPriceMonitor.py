@@ -10,7 +10,7 @@ RUN apk add make automake gcc g++ subversion python3-dev
 #---
 
 #This is necessary to install lxml
-RUN apk add libxml2-dev libxslt-dev python-dev
+RUN apk add libxml2-dev libxslt-dev python3-dev
 
 RUN pip install --no-cache-dir -r requirements.txt
 
