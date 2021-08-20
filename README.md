@@ -27,7 +27,7 @@ Combine all :D:
 docker run -d -v ~:/usr/src/app/db --entrypoint python ppm-dsc-hpv-gcm.py ./PPM-DSC-HeisePV-GCM.py -f ./db/product_price_monitor.db -r 3
 ```
 
-#Monitoring
+# Monitoring
 ```bash
 docker logs <container name>
 docker inspect <container name>
