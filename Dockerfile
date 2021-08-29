@@ -9,6 +9,8 @@ RUN apk update
 RUN apk add make automake gcc g++ subversion python3-dev
 #---
 
+RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
 
-CMD [ "python", "./PPM-IV-HeisePV-GCM.py" ]
+CMD [ "python", "./PPM-IV-HeisePV-GCM.py"]
