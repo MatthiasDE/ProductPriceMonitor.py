@@ -22,6 +22,7 @@ Option 2: In Background
 ```bash
 docker run -d -v ~:/usr/src/app/db ppm-dsc-hpv-gcm.py
 docker exec -it <container name> sh
+```
 
 Combine all :D:
 ```bash
