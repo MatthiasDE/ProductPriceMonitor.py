@@ -40,6 +40,20 @@ docker build --no-cache -t ppm-iv-hpv-gcm.py .
 docker run -d -v ~:/usr/src/app/db -v /srv/nginx:/usr/src/app/img ppm-iv-hpv-gcm.py
 ```
 
+## Frontend - URL Endpoint
+
+### Run
+```bash
+docker pull nginx
+docker run --name my-nginx -v /srv/nginx:/usr/share/nginx/html:ro -d -p 80:80 nginx
+```
+
+The Graphics created by the Backend Components are accessible in your browser with:
+```
+http://<yourserverip>/daily.png
+http://<yourserverip>/intraday.png
+```
+
 # Monitoring
 ```bash
 docker logs <container name>
