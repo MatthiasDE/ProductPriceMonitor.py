@@ -1,3 +1,0 @@
-#This is the requirements.txt that specifies needed libraries for Python 3 used by the application
-pandas
-matplotlib
