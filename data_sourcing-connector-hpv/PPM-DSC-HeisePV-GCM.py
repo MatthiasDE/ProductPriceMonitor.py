@@ -1,9 +1,9 @@
 ### IMPORTANT VARIABLES
 urls_dict =  dict()
-urls_dict['GeForce RTX 3060'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=e&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9810_06+16+-+RTX+3060'
-urls_dict['GeForce RTX 3060 Ti'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=e&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9816_03+05+16+-+RTX+3060+Ti'
-urls_dict['Radeon RX 6600 XT'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=e&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9816_02+04+11+-+RX+6600+XT'
-urls_dict['Radeon RX 6700 XT'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=e&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9816_02+04+11+-+RX+6700+XT'
+urls_dict['GeForce RTX 3060'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=l&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9810_06+16+-+RTX+3060'
+urls_dict['GeForce RTX 3060 Ti'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=l&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9816_03+05+16+-+RTX+3060+Ti'
+urls_dict['Radeon RX 6600 XT'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=l&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9816_02+04+11+-+RX+6600+XT'
+urls_dict['Radeon RX 6700 XT'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=l&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9816_02+04+11+-+RX+6700+XT'
 
 
 requests_header_dict = dict()
@@ -52,7 +52,8 @@ def get_model_price_data(url):
     r = requests.get(url, headers=requests_header_dict)
     #r = requests.get(url, headers={'User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0'})
     
-    print(r.content)
+    if args.verbose:
+        print(r.content)
     
     product_dict = dict()
     
@@ -67,7 +68,8 @@ def get_model_price_data(url):
         
         product_dict[product_name] = [model, float(product_price.replace(",", "."))]
 
-    #print(product_dict)
+    if args.verbose:
+        print(product_dict)
 
     return product_dict
 
@@ -161,12 +163,6 @@ def create_database(db_file):
 
 ### ENTRY POINT
 import argparse
-
-def testmode():
-    print('Test')
-
-def normalmode():
-    print(args)
 
 parser = argparse.ArgumentParser(
     description="""    ____                 __           __  ____       _           __  ___            _ __            
