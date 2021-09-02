@@ -2,7 +2,13 @@
 Aggregated Product Price Monitor for Graphic Cards
 
 ## In a Nutshell
-![Build'n'Run](./ProductPriceMonitor-Build_n_Run.drawio)
+### What you get
+Nice graphic with the aggregated price statistics updated 7-8 times a day.
+
+[CLICK HERE for an example page with the service result](http://link-online.de/daily.png)
+
+### How to setup in a picture
+![Build'n'Run](./ProductPriceMonitor-Build_n_Run.png)
 
 ## Backend - Connector
 
