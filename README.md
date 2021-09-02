@@ -1,6 +1,9 @@
 # ProductPriceMonitor.py
 Aggregated Product Price Monitor for Graphic Cards
 
+## In a Nutshell
+![Build'n'Run](./ProductPriceMonitor-Build_n_Run.drawio)
+
 ## Backend - Connector
 
 ### Build
