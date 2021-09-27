@@ -30,7 +30,10 @@ docker run -v ~:/usr/src/app/db -it --entrypoint python ppm-dsc-hpv-gcm.py ./PPM
 Option 2: In Background
 ```bash
 docker run -d -v ~:/usr/src/app/db ppm-dsc-hpv-gcm.py
-docker exec -it <container name> sh
+```
+Workaround until bug is fixed:
+```bash
+docker run -d -v ~:/usr/src/app/db --entrypoint python ppm-dsc-hpv-gcm.py ./PPM-DSC-HeisePV-GCM.py -f ./db/product_price_monitor.db -r 3
 ```
 
 Combine all :D:
@@ -68,6 +71,7 @@ http://<yourserverip>/intraday.png
 ```bash
 docker logs <container name>
 docker inspect <container name>
+docker exec -it <container name> sh
 ```
 
 You might be interested that you use "-f" with the logs command to follow the logs continuously.
