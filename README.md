@@ -31,15 +31,6 @@ Option 2: In Background
 ```bash
 docker run -d -v ~:/usr/src/app/db ppm-dsc-hpv-gcm.py
 ```
-Workaround until bug is fixed:
-```bash
-docker run -d -v ~:/usr/src/app/db --entrypoint python ppm-dsc-hpv-gcm.py ./PPM-DSC-HeisePV-GCM.py -f ./db/product_price_monitor.db -r 3
-```
-
-Combine all :D:
-```bash
-docker run -d -v ~:/usr/src/app/db --entrypoint python ppm-dsc-hpv-gcm.py ./PPM-DSC-HeisePV-GCM.py -f ./db/product_price_monitor.db -r 3
-```
 
 ## Backend - Exporter
 
