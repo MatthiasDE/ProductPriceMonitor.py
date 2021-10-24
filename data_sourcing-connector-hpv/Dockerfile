@@ -16,4 +16,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "PPM-DSC-HeisePV-GCM.py -f ./db/product_price_monitor.db -r 3" ]
+ENTRYPOINT [ "python", "PPM-DSC-HeisePV-GCM.py", "-f", "./db/product_price_monitor.db", "-r", "3" ]
