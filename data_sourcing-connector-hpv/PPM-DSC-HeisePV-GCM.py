@@ -2,12 +2,11 @@
 urls_dict =  dict()
 urls_dict['GeForce RTX 3060'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=l&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9810_06+16+-+RTX+3060'
 urls_dict['GeForce RTX 3060 Ti'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=l&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9816_03+05+16+-+RTX+3060+Ti'
-urls_dict['Radeon RX 6600 XT'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=l&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9816_02+04+11+-+RX+6600+XT'
-urls_dict['Radeon RX 6700 XT'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=l&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9816_02+04+11+-+RX+6700+XT'
-
+urls_dict['Radeon RX 6600 XT'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=l&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9809_05+12+-+RX+6600+XT'
+urls_dict['Radeon RX 6700 XT'] = 'https://www.heise.de/preisvergleich/?cat=gra16_512&v=l&hloc=at&hloc=de&sort=r&bl1_id=30&xf=545_ASRock%7E545_ASUS%7E545_ATI%7E545_EVGA%7E545_GIGABYTE%7E545_MSI%7E545_NVIDIA%7E545_Sapphire%7E9809_05+12+-+RX+6700+XT'
 
 requests_header_dict = dict()
-requests_header_dict['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0'
+requests_header_dict['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/94.0'
 
 
 ###CONNECTOR HELPER FUNCTIONS
